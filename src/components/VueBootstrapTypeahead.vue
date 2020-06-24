@@ -78,6 +78,11 @@ export default {
       default: (d) => d,
       validator: d => d instanceof Function
     },
+    searchSerializer: {
+      type: Function,
+      default: (d) => d,
+      validator: d => d instanceof Function
+    },
     backgroundVariant: String,
     textVariant: String,
     inputClass: {
@@ -110,7 +115,8 @@ export default {
         return {
           id: i,
           data: d,
-          text: this.serializer(d)
+          text: this.serializer(d),
+          searchText: this.searchSerializer(d)
         }
       })
     }
