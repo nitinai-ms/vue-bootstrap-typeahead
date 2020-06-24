@@ -7,6 +7,7 @@
       :data="countries"
       v-model="cntrySearch"
       :serializer="s => s.name"
+      :min-matching-chars="0"
       placeholder="Canada, United States, etc..."
       @hit="handleHit"
     >

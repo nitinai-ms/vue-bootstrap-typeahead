@@ -77,7 +77,7 @@ export default {
     },
 
     matchedItems() {
-      if (this.query.length === 0 || this.query.length < this.minMatchingChars) {
+      if (this.query.length < this.minMatchingChars) {
         return []
       }
 
